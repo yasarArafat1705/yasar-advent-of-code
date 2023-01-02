@@ -7,7 +7,7 @@ const readData = fs
   .replace(/[ ,]+/g, ",")
   .split(",");
 
-function getTotalCalories() {
+function getMaxCaloriesValue() {
   return Math.max.apply(
     Math,
     readData.map((e) => {
@@ -15,4 +15,4 @@ function getTotalCalories() {
     })
   );
 }
-console.log("Max Calories is " + getTotalCalories());
+console.log("Max Calories is " + getMaxCaloriesValue());
