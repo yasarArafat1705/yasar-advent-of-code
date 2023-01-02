@@ -7,11 +7,12 @@ const readData = fs
   .replace(/[ ,]+/g, ",")
   .split(",");
 
-const result = Math.max.apply(
-  Math,
-  readData.map((e) => {
-    return parseInt(e);
-  })
-);
-
-console.log("Max Calories is " + result);
+function getTotalCalories() {
+  return Math.max.apply(
+    Math,
+    readData.map((e) => {
+      return parseInt(e);
+    })
+  );
+}
+console.log("Max Calories is " + getTotalCalories());
